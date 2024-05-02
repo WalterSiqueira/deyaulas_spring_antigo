@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Adultos</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+	<main>
+		<div class="div_form">
+	    <h2>Lista de Adultos</h2>
+	    <table>
+	        <tr>
+	            <th>Nome</th>
+	            <th>Email</th>
+	            <th>Senha</th>
+	        </tr>
+	        <tr th:each="adulto : ${adultos}">
+	            <td th:text="${adulto.nome}"></td>
+	            <td th:text="${adulto.email}"></td>
+	            <td th:text="${adulto.senha}"></td>
+	        </tr>
+	    </table>
+	 </div>
+	</main>
+</body>
+</html>

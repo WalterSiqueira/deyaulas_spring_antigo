@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Crianças</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+	<main>
+		<div class="div_form">
+		    <h2>Lista de Crianças</h2>
+		    <table>
+		        <tr>
+		            <th>Nome</th>
+		            <th>Email</th>
+		            <th>Senha</th>
+		        </tr>
+		        <tr th:each="crianca : ${crianca}">
+		            <td th:text="${crianca.nome}"></td>
+		            <td th:text="${crianca.email}"></td>
+		            <td th:text="${crianca.senha}"></td>
+		        </tr>
+		    </table>
+		  </div>
+	</main>
+</body>
+</html>
